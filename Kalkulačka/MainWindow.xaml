@@ -41,7 +41,7 @@
         <Button Grid.Row="2" Grid.Column="1" Margin="5" Content="8" FontSize="70" Name="b_8" Click="B_8_Click"></Button>
         <Button Grid.Row="2" Grid.Column="2" Margin="5" Content="9" FontSize="70" Name="b_9" Click="B_9_Click"></Button>
         <Button Grid.Row="5" Margin="5" Content="0" FontSize="70" Name="b_0" Grid.ColumnSpan="2" Click="B_0_Click"/>
-        <Button Grid.Row="5" Grid.Column="2" Margin="5" Content="." FontSize="70" Name="b_point"></Button>
+        <Button Grid.Row="5" Grid.Column="2" Margin="5" Content="," FontSize="70" Name="b_point" Click="B_point_Click"></Button>
         <TextBlock Grid.ColumnSpan="3" Margin="10,0" Name="textBlock" FontSize="30" Grid.Column="1"></TextBlock>
         <TextBlock  Margin="10,0" Name="textBlock_znamenka" FontSize="30" Grid.Column="0" Grid.Row="0"></TextBlock>
     </Grid>

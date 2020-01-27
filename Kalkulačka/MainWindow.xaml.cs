@@ -20,7 +20,7 @@ namespace Kalkulačka
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<int> cisla = new List<int>();
+        List<double> cisla = new List<double>();
         
         List<char> znamenka = new List<char>();
         
@@ -83,7 +83,7 @@ namespace Kalkulačka
 
         private void B_plus_Click(object sender, RoutedEventArgs e)
         {
-            cisla.Add(Convert.ToInt32(textBlock.Text));
+            cisla.Add(Convert.ToDouble(textBlock.Text));
             znamenka.Add('+');
             textBlock_znamenka.Text = "+ ";
             textBlock.Text = "";
@@ -91,7 +91,7 @@ namespace Kalkulačka
 
         private void B_minus_Click(object sender, RoutedEventArgs e)
         {
-            cisla.Add(Convert.ToInt32(textBlock.Text));
+            cisla.Add(Convert.ToDouble(textBlock.Text));
             znamenka.Add('-');
             textBlock_znamenka.Text = "- ";
             textBlock.Text = "";
@@ -99,7 +99,7 @@ namespace Kalkulačka
 
         private void B_multiply_Click(object sender, RoutedEventArgs e)
         {
-            cisla.Add(Convert.ToInt32(textBlock.Text));
+            cisla.Add(Convert.ToDouble(textBlock.Text));
             znamenka.Add('*');
             textBlock_znamenka.Text = "* ";
             textBlock.Text = "";
@@ -107,7 +107,7 @@ namespace Kalkulačka
 
         private void B_slash_Click(object sender, RoutedEventArgs e)
         {
-            cisla.Add(Convert.ToInt32(textBlock.Text));
+            cisla.Add(Convert.ToDouble(textBlock.Text));
             znamenka.Add('/');
             textBlock_znamenka.Text = "/ ";
             textBlock.Text = "";
@@ -115,8 +115,8 @@ namespace Kalkulačka
 
         private void B_equals_Click(object sender, RoutedEventArgs e)
         {
-            cisla.Add(Convert.ToInt32(textBlock.Text));
-            int x = cisla[0];
+            cisla.Add(Convert.ToDouble(textBlock.Text));
+            double x = cisla[0];
 
             for (int i = 0; i < znamenka.Count; i++)
             {
@@ -141,6 +141,11 @@ namespace Kalkulačka
 
             textBlock_znamenka.Text = "=";
             textBlock.Text = x.ToString();
+        }
+
+        private void B_point_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text += ",";
         }
     }
 }
